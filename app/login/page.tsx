@@ -22,6 +22,18 @@ const [user, setUser] = useState<{
 
 
 
+const [token , setToken] = useState<{
+  name: string;
+  id: string;
+  role: 'buyer' | 'seller';
+  kycCompleted: boolean;
+} | null>(null);
+
+
+
+
+
+
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: '',

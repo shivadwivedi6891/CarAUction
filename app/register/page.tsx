@@ -20,14 +20,14 @@ export default function RegisterPage() {
       alert('Passwords do not match');
       return;
     }
-    // Redirect to KYC page
+
     window.location.href = '/kyc';
   };
 
   return (
     <div className="min-h-screen bg-green-200 dark:bg-green-900 text-green-900 dark:text-green-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
-        {/* Logo */}
+     
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-blue-100 rounded-full">
@@ -38,9 +38,9 @@ export default function RegisterPage() {
           <p className="text-gray-600 mt-2">Join AutoBid to start buying and selling</p>
         </div>
 
-        {/* Registration Form */}
+   
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* User Type */}
+         
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">I want to:</label>
             <div className="flex space-x-4">
@@ -69,7 +69,6 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          {/* Name Fields */}
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
@@ -95,7 +94,7 @@ export default function RegisterPage() {
             </div>
           </div>
 
-          {/* Email */}
+
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
             <input
@@ -108,7 +107,7 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Password */}
+  
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
             <input
@@ -121,7 +120,7 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Confirm Password */}
+  
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
             <input
@@ -134,7 +133,7 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Submit Button */}
+
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -143,7 +142,6 @@ export default function RegisterPage() {
           </button>
         </form>
 
-        {/* Links */}
         <div className="mt-6 text-center">
           <p className="text-gray-600">
             Already have an account?{' '}

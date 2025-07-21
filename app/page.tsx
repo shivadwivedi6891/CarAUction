@@ -70,10 +70,7 @@ export default function HomePage() {
               <div key={car.id} className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="relative">
                   <img src={car.image} alt={car.name} className="w-full h-56 object-cover" />
-                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-black/70 px-3 py-1 rounded-full text-sm font-medium text-gray-800 dark:text-white">
-                    <Clock className="h-3 w-3 inline mr-1" />
-                    {car.timeLeft}
-                  </div>
+                 
                 </div>
                 
                 <div className="p-6">
@@ -88,8 +85,7 @@ export default function HomePage() {
                       ${car.price.toLocaleString()}
                     </span>
                     <div className="flex items-center text-sm text-gray-600 dark:text-gray-300">
-                      <Eye className="h-4 w-4 mr-1" />
-                      {car.watchers} watching
+                     
                     </div>
                   </div>
                   

@@ -2,6 +2,7 @@
 
 
 
+
 'use client';
 
 import { useState } from 'react';
@@ -149,35 +150,25 @@ export default function CarDetailPage() {
 
   return (
     <PrivateRoute>
-     <div className="min-h-screen bg-gray-50">
+     <div className=" dark:from-gray-900 dark:to-gray-800 min-h-screen bg-gray-50">
      
     
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Car Details */}
+   
           <div className="lg:col-span-2">
-            {/* Car Image */}
+           
             <div className="relative mb-6">
               <img src={car.image} alt={car.name} className="w-full h-96 object-cover rounded-2xl" />
-              <div className="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium">
-                <Clock className="h-3 w-3 inline mr-1" />
-                {car.timeLeft}
-              </div>
+             
               <div className="absolute top-4 right-4 flex space-x-2">
-                <button
-                  onClick={() => setIsWatching(!isWatching)}
-                  className="p-2 bg-white/90 rounded-full hover:bg-white"
-                >
-                 
-                </button>
-                <button className="p-2 bg-white/90 rounded-full hover:bg-white">
-                  <Share2 className="h-5 w-5 text-gray-600" />
-                </button>
+              
+               
               </div>
             </div>
 
-            {/* Car Info */}
+         
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h1 className="text-3xl font-bold mb-4">{car.name}</h1>
               
@@ -200,7 +191,7 @@ export default function CarDetailPage() {
                 </div>
               </div>
 
-              {/* Description */}
+      
               <div className="mb-6">
                 <h2 className="text-xl font-semibold mb-3">Description</h2>
                 <p className="text-gray-600 leading-relaxed">
@@ -211,7 +202,6 @@ export default function CarDetailPage() {
                 </p>
               </div>
 
-              {/* Specifications */}
               <div>
                 <h2 className="text-xl font-semibold mb-3">Specifications</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -236,15 +226,14 @@ export default function CarDetailPage() {
             </div>
           </div>
 
-          {/* Right Column - Bidding */}
+   
           <div className="space-y-6">
-            {/* Bidding Card */}
+         
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-semibold">Current Bid</h2>
                 <div className="flex items-center text-sm text-gray-600">
-                  <Eye className="h-4 w-4 mr-1" />
-                  {car.watchers} watching
+                 
                 </div>
               </div>
               
@@ -282,7 +271,7 @@ export default function CarDetailPage() {
               </button>
             </div>
 
-            {/* Seller Info */}
+       
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h2 className="text-xl font-semibold mb-4">Seller Information</h2>
               <div className="space-y-3">
@@ -301,7 +290,7 @@ export default function CarDetailPage() {
               </div>
             </div>
 
-            {/* Bid History */}
+         
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h2 className="text-xl font-semibold mb-4">Bid History</h2>
               <div className="space-y-3">
@@ -322,7 +311,7 @@ export default function CarDetailPage() {
         </div>
       </div>
 
-      {/* Bid Modal */}
+     
      
     </div>
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Car, Search, Eye, Clock, MapPin } from 'lucide-react';
+import { Car, Search,  MapPin } from 'lucide-react';
 
 export default function AuctionsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,8 +14,7 @@ export default function AuctionsPage() {
       price: 285000,
       image: 'https://images.pexels.com/photos/544542/pexels-photo-544542.jpeg',
       location: 'Los Angeles, CA',
-      timeLeft: '2d 14h 30m',
-      watchers: 234,
+   
       bids: 47,
       mileage: 12500,
       year: 2019
@@ -26,8 +25,7 @@ export default function AuctionsPage() {
       price: 125000,
       image: 'https://images.pexels.com/photos/810357/pexels-photo-810357.jpeg',
       location: 'Miami, FL',
-      timeLeft: '1d 8h 15m',
-      watchers: 156,
+    
       bids: 32,
       mileage: 8400,
       year: 2020
@@ -38,8 +36,7 @@ export default function AuctionsPage() {
       price: 195000,
       image: 'https://images.pexels.com/photos/1638459/pexels-photo-1638459.jpeg',
       location: 'New York, NY',
-      timeLeft: '3h 45m',
-      watchers: 189,
+    
       bids: 28,
       mileage: 5200,
       year: 2021
@@ -50,8 +47,7 @@ export default function AuctionsPage() {
       price: 72000,
       image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg',
       location: 'Chicago, IL',
-      timeLeft: '5d 12h 20m',
-      watchers: 92,
+     
       bids: 19,
       mileage: 3800,
       year: 2022
@@ -62,8 +58,8 @@ export default function AuctionsPage() {
       price: 145000,
       image: 'https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg',
       location: 'Dallas, TX',
-      timeLeft: '4d 6h 10m',
-      watchers: 167,
+    
+     
       bids: 41,
       mileage: 9600,
       year: 2020
@@ -74,8 +70,8 @@ export default function AuctionsPage() {
       price: 165000,
       image: 'https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg',
       location: 'San Francisco, CA',
-      timeLeft: '6d 18h 45m',
-      watchers: 203,
+ 
+   
       bids: 35,
       mileage: 7200,
       year: 2019
@@ -99,7 +95,7 @@ export default function AuctionsPage() {
           </p>
         </div>
 
-        {/* Search */}
+      
         <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-800 p-6 mb-8">
           <div className="relative">
             <Search className="absolute left-4 top-4 h-5 w-5 text-gray-400 dark:text-gray-300" />
@@ -113,23 +109,20 @@ export default function AuctionsPage() {
           </div>
         </div>
 
-        {/* Results */}
+       
         <div className="mb-6">
           <p className="text-lg text-gray-600 dark:text-gray-300">
             {filteredCars.length} auctions found
           </p>
         </div>
 
-        {/* Car Grid */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCars.map((car) => (
             <div key={car.id} className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-800 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="relative">
                 <img src={car.image} alt={car.name} className="w-full h-56 object-cover" />
-                <div className="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 px-3 py-1 rounded-full text-sm font-medium text-gray-900 dark:text-gray-100">
-                  <Clock className="h-3 w-3 inline mr-1" />
-                  {car.timeLeft}
-                </div>
+                
               </div>
               
               <div className="p-6">
@@ -149,8 +142,7 @@ export default function AuctionsPage() {
                     ${car.price.toLocaleString()}
                   </span>
                   <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                    <Eye className="h-4 w-4 mr-1" />
-                    {car.watchers} watching
+                   
                   </div>
                 </div>
                 
