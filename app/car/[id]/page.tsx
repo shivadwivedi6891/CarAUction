@@ -169,7 +169,7 @@ export default function CarDetailPage() {
                   onClick={() => setIsWatching(!isWatching)}
                   className="p-2 bg-white/90 rounded-full hover:bg-white"
                 >
-                  <Heart className={`h-5 w-5 ${isWatching ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
+                 
                 </button>
                 <button className="p-2 bg-white/90 rounded-full hover:bg-white">
                   <Share2 className="h-5 w-5 text-gray-600" />
